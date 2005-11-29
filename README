@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1414
+
+This is a small ftplugin that helps jumping to a key in a bibtex file. 
+It assumes a bibtex file that is alphabethically ordered by the bibitem 
+key. Maybe some people will find this useful.
+
+Type <LocalLeader>g and a bibtex-key you want to find.
+Type <LocalLeader>n to jump to the next key in line.
+
+Example use:
+
+If the keys in the file were: 
+    
+    @article{aa,
+    ...}
+    @article{ab
+    ...}
+    @article{aba
+    ...}
+    @article{ac
+    ...}
+
+then '<LL>gab<cr>' would take you to "ab" but '<LL>nab<cr>' to "ac". 
+Actually BibGotoNextIndex is the main reason for why I wrote this one.
+
+If g:bibFindIndexAllowSpaces is true, the "entry head" may include whitespace. 
+(I'm not sure if this is legal bibtex, though.)
+
